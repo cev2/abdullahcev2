@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+@import url('gallery.css');
+@import url('footer.css');
+@import url('profile.css');
+@import url('template.css');
+
+:root {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #4E5150;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }

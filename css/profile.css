@@ -1,0 +1,46 @@
+header{
+    max-width: 372px;
+    margin: auto;
+    padding: 1.83em 4.17em;
+  }
+  
+  .profile{
+    display: flex;
+    flex-direction: column;
+  }
+  .profile img{
+    width: 65%;
+    margin: auto;
+    margin-bottom: 1em;
+    border-radius: 1.5em;
+  }
+  span.name{
+    font-size: 300%;
+    color: #ffffff;
+  }
+  span.city{
+    color: #ffffff;
+    font-size: 170%;
+  }
+  .account{
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+  }
+  .account-box{
+    padding: 1em 0 ;
+    background: #d5e9ee;
+    border-radius: .88em;
+    display: flex;
+    flex-direction: column;
+    width: 33.3333%;
+    margin: .5em;
+  }
+  .statistic-num{
+    font-size: 170%;
+  }
+  .statistic-des{
+    font-size: 170%;
+    color: #6caad3;
+  }
+  

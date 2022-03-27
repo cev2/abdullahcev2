@@ -1,0 +1,48 @@
+/*Galeri Yazısı*/
+
+.heading {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    padding: 3.5rem 0;
+    color: #378eb1;
+  }
+
+/*Fotoğraf Kenarları*/
+
+img{
+    border-radius: .88em;
+    margin: .5%;
+  }
+
+  .post-image img{
+    width: 100%;
+    vertical-align: top;
+  }
+
+/*Fotoğraf Listesi*/
+
+.post-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--darkgray);
+    height: auto;
+  }
+/*Fotğrafın boyutu gibi bir şey*/
+
+  .post-image{
+    flex: 0 1 250px;
+    max-width: 250px;
+    margin: 2px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0,8);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
