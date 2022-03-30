@@ -3,6 +3,7 @@
 .heading {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 4rem;
+    position: relative;
     font-weight: 500;
     line-height: 1.5;
     text-align: center;

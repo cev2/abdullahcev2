@@ -1,10 +1,14 @@
+
 header{
+  position: relative;
     max-width: 372px;
     margin: auto;
     padding: 1.83em 4.17em;
   }
   
+  
   .profile{
+    position: relative;
     display: flex;
     flex-direction: column;
   }

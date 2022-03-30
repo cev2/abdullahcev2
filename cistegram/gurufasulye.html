@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Instagram Posts</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <header>
+
+        <div class="profile">
+            <img src="img/Profil-Resmi.jpg" width="100%">
+            <span class="name">Abdullah Çevik</span>
+            <span class="city">İstanbul, Türkiye</span>
+        </div>
+
+        <div class="account">
+            <div class="account-box">
+                <span class="statistic-num">4,2</span>
+                <span class="statistic-des">Yaş</span>
+            </div>
+
+            <div class="account-box">
+                <span class="statistic-num">1</span>
+                <span class="statistic-des">Boy</span>
+            </div>
+
+            <div class="account-box">
+                <span class="statistic-num">60</span>
+                <span class="statistic-des">Kilo</span>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="modal">
+        <div class="modalContent">
+            <div class="modalContent__closeButton jsModalContent__closeButton">
+                <div id="x-icon" class="x">
+                    <i class="fa-solid fa-x fa-3x"></i>
+                                </div>
+            </div>
+            <img class="modalContent__photo jsModalContent__photo" alt="">
+        </div>
+        <div class="modalBackground jsModalBackground"></div>
+    </div>
+
+    <main>
+
+        <section class="tabs">
+            <div class="container">
+                <div id="tab-1" class="tab-item tab-border">
+                    <i class="fa-solid fa-camera fa-3x"></i>
+                    <p class="hide-sm">Fotoğraflar</p>
+                                </div>
+                <div id="tab-2" class="tab-item">
+                    <i class="fas fa-video fa-3x"></i>
+                    <p class="hide-sm">Videolar</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-content">
+            <div id="tab-1-content" class="tab-content-item show">
+                <section class="photosGrid">
+                    <a href="#" title="Photo 1" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu.jpg')" data-image-src="img/compu.jpg"></a>
+                    <a href="#" title="Photo 2" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu.jpg')" data-image-src="img/compu.jpg"></a>
+                    <a href="#" title="Photo 3" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu.jpg')" data-image-src="img/compu.jpg"></a>
+                    <a href="#" title="Photo 4" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu.jpg')" data-image-src="img/compu.jpg"></a>
+                    <a href="#" title="Photo 5" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu.jpg')" data-image-src="img/compu.jpg"></a>
+                    <a href="#" title="Photo 6" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu.jpg')" data-image-src="img/compu.jpg"></a>
+                </section>
+            </div>
+        </section>
+
+        <section class="tab-content">
+            <div id="tab-2-content" class="tab-content-item">
+                <section class="photosGrid">
+                    <a href="#" title="Photo 1" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu2.jpg')" data-image-src="img/compu2.jpg"></a>
+                    <a href="#" title="Photo 2" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu2.jpg')" data-image-src="img/compu2.jpg"></a>
+                    <a href="#" title="Photo 3" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu2.jpg')" data-image-src="img/compu2.jpg"></a>
+                    <a href="#" title="Photo 4" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu2.jpg')" data-image-src="img/compu2.jpg"></a>
+                    <a href="#" title="Photo 5" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu2.jpg')" data-image-src="img/compu2.jpg"></a>
+                    <a href="#" title="Photo 6" class="photosGrid__Photo jsPhotosGrid__Photo"
+                        style="background-image: url('img/compu2.jpg')" data-image-src="img/compu2.jpg"></a>
+                </section>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script>
+        document.querySelectorAll('.jsPhotosGrid__Photo').forEach(elem => elem.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            document.body.classList.add('showModal');
+
+            document.querySelector('.jsModalContent__photo').src = this.dataset.imageSrc || '';
+
+            document.querySelector('.jsModalContent__photo').alt = this.dataset.imageAlt || '';
+
+            document.querySelector('.jsModalContent__closeButton').focus();
+        }));
+
+        document.querySelectorAll('.jsModalContent__closeButton, .jsModalBackground').forEach(elem => elem.addEventListener('click', function () {
+            document.body.classList.remove('showModal');
+
+            document.querySelector('.jsModalContent__photo').src = ""
+
+            document.querySelector('.jsModalContent__photo').alt = ""
+        }))
+
+    </script>
+
+
+    <footer class="footer">
+        <div class="footer-col">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="tabContent.js"></script>
+    <script src="particles.js"></script>
+    <script src="particlesEdit.js"></script>
+</body>
+
+
+</html>
